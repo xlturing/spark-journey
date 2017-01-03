@@ -19,10 +19,6 @@ object ConsumerMain extends Serializable {
   @transient lazy val log = LogManager.getRootLogger
   def functionToCreateContext(): StreamingContext = {
     val sparkConf = new SparkConf().setAppName("WordFreqConsumer").setMaster("spark://localhost:7070")
-      .set("spark.default.parallelism", "3")
-      .set("spark.streaming.concurrentJobs", "2")
-      .set("spark.executor.memory", "5G")
-      .set("spark.cores.max", "20")
       .set("spark.local.dir", "~/tmp")
       .set("spark.streaming.kafka.maxRatePerPartition", "10")
     val ssc = new StreamingContext(sparkConf, Seconds(3))

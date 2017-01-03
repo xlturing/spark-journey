@@ -10,8 +10,8 @@ import org.apache.spark.streaming.dstream.InputDStream
 import org.apache.spark.streaming.kafka.HasOffsetRanges
 import org.apache.spark.streaming.kafka.KafkaUtils
 
-import bee.wordfreq.dao.KafkaCluster
-import bee.wordfreq.dao.KafkaCluster.LeaderOffset
+import com.sparkstreaming.main.KafkaCluster
+import com.sparkstreaming.main.KafkaCluster.LeaderOffset
 import kafka.common.TopicAndPartition
 import kafka.message.MessageAndMetadata
 import kafka.serializer.Decoder
